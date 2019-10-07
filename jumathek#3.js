@@ -2,7 +2,7 @@ let findLostOne = (number) => {
   // First find how digit number 
   let x = ''
   for (let i in number) {
-    if (number[0] === "1" && number[1] === "1") {
+    if (number[0] === "1" && number[1] === 11) {
       x = number[0] + number[1]
       break;
     } 
@@ -30,4 +30,3 @@ let findLostOne = (number) => {
 console.log(findLostOne('23242526272830'))
 console.log(findLostOne('101102103104105106107108109111112113'))
 console.log(findLostOne('12346789'))
-console.log(findLostOne('11121314151718'))
