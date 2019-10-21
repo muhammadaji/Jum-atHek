@@ -31,11 +31,11 @@
           right.unshift(left[y])
         }
       }
+      
       // find if turn right or left
       if (parseInt(i, 10) === keys.length - 1) {
         break;
       } else {
-        // console.log(left)
         let aggLeft = 0
         let aggRight = 0
         for (let x in left) {
@@ -44,16 +44,14 @@
           }
           aggLeft++
         }
-        // console.log(aggLeft)  
 
-        // console.log(right)
         for (let y = right.length - 1; y >= 0; y--) {
           if (parseInt(keys[parseInt(i, 10)+1],10) === parseInt(right[y], 10)) {
             break;
           }
           aggRight++
         }
-        // console.log(aggRight)
+
         let nextTurn = ""
 
         if ( aggRight < aggLeft) {
@@ -64,11 +62,11 @@
           nextTurn = turn
         }
 
-        // console.log(nextTurn)
+        // Check if next turn is different or not from before
         if (turn !== nextTurn) {
           counter++
-          turn = nextTurn
         }
+        turn = nextTurn
       }
     }
     return counter
